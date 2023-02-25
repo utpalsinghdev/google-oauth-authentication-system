@@ -50,7 +50,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 // Error handler
 app.use((error: unknown, req: Request, res: Response, next: NextFunction) => {
     console.error(error);
-    let errorMessage = "An unknown error occurred!";
+    let errorMessage = error;
     let errorCode = 500;
     if (isHttpError(error)) {
         errorMessage = error.message;

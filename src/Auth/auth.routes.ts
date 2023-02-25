@@ -9,9 +9,8 @@ router.get('/google', passport.authenticate('google', {
 }));
 
 router.get('/google/callback', passport.authenticate('google', {
-    successRedirect: 'http://localhost:3000',
-    // failureFlash: true,
-    failureRedirect: 'http://localhost:3000/login'
+    successRedirect: '/',
+    failureRedirect: '/login'
 }));
 
 
